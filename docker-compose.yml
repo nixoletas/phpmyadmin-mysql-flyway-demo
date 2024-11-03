@@ -14,7 +14,7 @@ services:
       MYSQL_USER: demouser
       MYSQL_PASSWORD: password
     networks:
-      - mysql-phpmyadmin
+      - db-network
 
   phpmyadmin:
     container_name: demo-phpadmin
@@ -28,7 +28,7 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: password
     networks:
-      - mysql-phpmyadmin
+      - db-network
 
   flyway:
     container_name: demo-migrations
@@ -39,10 +39,10 @@ services:
     volumes:
       - ./db/migrations:/flyway/sql
     networks:
-      - mysql-phpmyadmin
+      - db-network
 
 networks:
-  mysql-phpmyadmin:
+  db-network:
 
 volumes:
   db_data:
