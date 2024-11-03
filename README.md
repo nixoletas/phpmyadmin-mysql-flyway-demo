@@ -17,7 +17,7 @@ Run migrations
 docker start demo-migrations && docker logs demo-migrations -f
 ```
 
-log
+Migration logs
 
 ```bash
 Database: jdbc:mysql://db:3306/demodb (MySQL 5.7)
