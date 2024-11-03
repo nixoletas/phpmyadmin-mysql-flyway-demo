@@ -1,2 +1,2 @@
--- V2__insert_teste_user.sql
+-- Insert test user
 INSERT INTO users (name, age) VALUES ('Nick Miyasato', 26);
